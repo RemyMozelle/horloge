@@ -40,7 +40,6 @@ function addSeconde(){
     if(compteur_heures === 11){heure.setAttribute('style', 'top: 130px; left: 145px');}
     if(compteur_heures === 12){heure.setAttribute('style', 'top: 110px; left: 200px');}
 
-
     if(compteur_secondes === 60){
         compteur_minutes ++;
         compteur_secondes = 0;
@@ -49,21 +48,24 @@ function addSeconde(){
     if(compteur_minutes === 60){
         compteur_heures ++;
         compteur_minutes = 0;
+        compteur_secondes = 0;
         minute.setAttribute('style', 'top: 110px; left: 200px');
-        
     }
 
-    if(compteur_heures === 24){        
-        compteur_secondes = 0;
-        compteur_minutes = 0;
+    if(compteur_heures === 12){
         compteur_heures = 0;
+        compteur_minutes = 0;
+        compteur_secondes = 0;
         heure.setAttribute('style', 'top: 110px; left: 200px');
+        minute.setAttribute('style', 'top: 110px; left: 200px');
     }
+
+    
     console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure');
 }
 
 up[0].addEventListener('click', ()=> {
-    start = window.setInterval(addSeconde, 10); // pour testé si l'horge fonctionne comme prévue sinon mettre la valeur a 1000, pour 1seconde.
+    start = window.setInterval(addSeconde, 1); // pour testé si l'horge fonctionne comme prévue sinon mettre la valeur a 1000, pour 1seconde.
 });
 
 up[1].addEventListener('click', ()=> window.clearInterval(start));
