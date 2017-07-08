@@ -23,7 +23,7 @@ function addSeconde(){
     if(compteur_minutes === 45){minute.setAttribute('style', 'top: 215px; left: 95px');}
     if(compteur_minutes === 50){minute.setAttribute('style', 'top: 165px; left: 110px');}
     if(compteur_minutes === 55){minute.setAttribute('style', 'top: 130px; left: 145px');}
-    
+    if(compteur_heures === 12){minute.setAttribute('style', 'top: 110px; left: 200px');}
 
 // HEURES
 
