@@ -5,13 +5,13 @@ let compteur_secondes = 0;
 let start;
 // variable global : selections des elements
 let position = document.querySelectorAll('div');
-let up = document.querySelectorAll('button');
+let onOff = document.querySelectorAll('button');
 let minute = document.getElementById('aiguilleminute');
 let heure = document.getElementById('aiguilleheure');
 
 function addSeconde(){
 // MINUTES
-    compteur_secondes += 5; // pour le test, sinon mettre la valeur a ++.
+    compteur_secondes += 20; // pour le test, sinon mettre la valeur a ++.
     if(compteur_minutes === 5) {minute.setAttribute('style', 'top: 130px; left: 245px');}
     if(compteur_minutes === 10){minute.setAttribute('style', 'top: 180px; left: 275px');}
     if(compteur_minutes === 15){minute.setAttribute('style', 'top: 215px; left: 290px');}
@@ -64,8 +64,8 @@ function addSeconde(){
     console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure');
 }
 
-up[0].addEventListener('click', ()=> {
+onOff[0].addEventListener('click', ()=> {
     start = window.setInterval(addSeconde, 1); // pour testé si l'horge fonctionne comme prévue sinon mettre la valeur a 1000, pour 1seconde.
 });
 
-up[1].addEventListener('click', ()=> window.clearInterval(start));
+onOff[1].addEventListener('click', ()=> window.clearInterval(start));
