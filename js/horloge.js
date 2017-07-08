@@ -22,8 +22,8 @@ const position = [
      "top: 165px; left: 110px;",
      "top: 130px; left: 145px;",
      "top: 110px; left: 200px",
-]
-;
+];
+
 function addSeconde(){
 // MINUTES
     compteur_secondes += 1; // pour le test, sinon mettre la valeur a ++.
@@ -43,18 +43,18 @@ function addSeconde(){
 
 // HEURES
 
-    if(compteur_heures === 1)  {heure.setAttribute('style', 'top: 130px; left: 245px;');}
-    if(compteur_heures === 2)  {heure.setAttribute('style', 'top: 180px; left: 275px');}
-    if(compteur_heures === 3)  {heure.setAttribute('style', 'top: 215px; left: 290px');}
-    if(compteur_heures === 4)  {heure.setAttribute('style', 'top: 265px; left: 285px');}
-    if(compteur_heures === 5)  {heure.setAttribute('style', 'top: 300px; left: 245px');}
-    if(compteur_heures === 6)  {heure.setAttribute('style', 'top: 315px; left: 195px');}
-    if(compteur_heures === 7)  {heure.setAttribute('style', 'top: 300px; left: 145px');}
-    if(compteur_heures === 8)  {heure.setAttribute('style', 'top: 265px; left: 110px');}
-    if(compteur_heures === 9)  {heure.setAttribute('style', 'top: 215px; left: 95px');}
-    if(compteur_heures === 10) {heure.setAttribute('style', 'top: 165px; left: 110px');}
-    if(compteur_heures === 11) {heure.setAttribute('style', 'top: 130px; left: 145px');}
-    if(compteur_heures === 12) {heure.setAttribute('style', 'top: 110px; left: 200px');}
+    if(compteur_heures === 1)  {heure.setAttribute('style', position[0]);}
+    if(compteur_heures === 2)  {heure.setAttribute('style', position[1]);}
+    if(compteur_heures === 3)  {heure.setAttribute('style', position[2]);}
+    if(compteur_heures === 4)  {heure.setAttribute('style', position[3]);}
+    if(compteur_heures === 5)  {heure.setAttribute('style', position[4]);}
+    if(compteur_heures === 6)  {heure.setAttribute('style', position[5]);}
+    if(compteur_heures === 7)  {heure.setAttribute('style', position[6]);}
+    if(compteur_heures === 8)  {heure.setAttribute('style', position[7]);}
+    if(compteur_heures === 9)  {heure.setAttribute('style', position[8]);}
+    if(compteur_heures === 10) {heure.setAttribute('style', position[9]);}
+    if(compteur_heures === 11) {heure.setAttribute('style', position[10]);}
+    if(compteur_heures === 12) {heure.setAttribute('style', position[11]);}
 
     if(compteur_secondes === 60){
         compteur_minutes ++;
@@ -77,7 +77,7 @@ function addSeconde(){
     }
 
     
-    //console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure');
+    console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure');
 }
 
 onOff[0].addEventListener('click', ()=> {
