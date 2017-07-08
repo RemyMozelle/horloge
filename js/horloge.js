@@ -77,6 +77,8 @@ function horloge(){
         if(compteur_heures === 10) {heure.setAttribute('style', position[9]);}
         if(compteur_heures === 11) {heure.setAttribute('style', position[10]);}
         if(compteur_heures === 12) {heure.setAttribute('style', position[11]);}
+
+        console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure'); //verifie le bon fonctionnement de l'horloge
 }
 // lance l'horloge
 on_Off[1].addEventListener('click', ()=> {
