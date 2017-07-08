@@ -7,36 +7,20 @@ let on_Off = document.querySelectorAll('button');
 let minute = document.querySelector('#aiguilleminute');
 let heure = document.querySelector('#aiguilleheure');
 
-const position = [
-     
+const position = [    
      "top: 130px; left: 245px;",
-     "top: 130px; left: 245px;", 
-     "top:  180px; left: 275px;",    
-     "top:  215px; left: 290px;",    
-     "top:  265px; left: 285px;",    
+     "top: 180px; left: 275px;",    
+     "top: 215px; left: 290px;",    
+     "top: 265px; left: 285px;",    
      "top: 300px; left: 245px;",    
      "top: 315px; left: 195px;",    
-     "top:  300px; left: 145px;",    
-     "top:  265px; left: 110px;",   
-     "top:  215px; left: 95px;",    
+     "top: 300px; left: 145px;",    
+     "top: 265px; left: 110px;",   
+     "top: 215px; left: 95px;",    
      "top: 165px; left: 110px;",     
-     "top: 130px; left: 145px;",
-       
-       
+     "top: 130px; left: 145px;",  
 ];
-/*
-if(compteur_minutes === 5) {minute.setAttribute('style', 'top: 130px; left: 245px');}
-    if(compteur_minutes === 10){minute.setAttribute('style', 'top: 180px; left: 275px');}
-    if(compteur_minutes === 15){minute.setAttribute('style', 'top: 215px; left: 290px');}
-    if(compteur_minutes === 20){minute.setAttribute('style', 'top: 265px; left: 285px');}
-    if(compteur_minutes === 25){minute.setAttribute('style', 'top: 300px; left: 245px');}
-    if(compteur_minutes === 30){minute.setAttribute('style', 'top: 315px; left: 195px');}
-    if(compteur_minutes === 35){minute.setAttribute('style', 'top: 300px; left: 145px');}
-    if(compteur_minutes === 40){minute.setAttribute('style', 'top: 265px; left: 110px');}
-    if(compteur_minutes === 45){minute.setAttribute('style', 'top: 215px; left: 95px');}
-    if(compteur_minutes === 50){minute.setAttribute('style', 'top: 165px; left: 110px');}
-    if(compteur_minutes === 55){minute.setAttribute('style', 'top: 130px; left: 145px');}
-*/
+
 function addMinutes(){
     if(compteur_secondes === 60){
         compteur_minutes ++;
