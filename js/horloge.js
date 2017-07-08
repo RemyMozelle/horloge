@@ -1,32 +1,74 @@
 // variable global
-let compteur_minutes = 0;
-let compteur_heures = 0;
-let compteur_secondes = 0;
+let compteur_secondes = 0; let compteur_minutes = 0; let compteur_heures = 0; 
 let start;
 // variable global : selections des elements
 
-let onOff = document.querySelectorAll('button');
-let minute = document.getElementById('aiguilleminute');
-let heure = document.getElementById('aiguilleheure');
+let on_Off = document.querySelectorAll('button');
+let minute = document.querySelector('#aiguilleminute');
+let heure = document.querySelector('#aiguilleheure');
 
 const position = [
-     "top: 130px; left: 245px;",
-     "top: 180px; left: 275px;",
-     "top: 215px; left: 290px;",
-     "top: 265px; left: 285px;",
-     "top: 300px; left: 245px;",
-     "top: 315px; left: 195px;",
-     "top: 300px; left: 145px;",
-     "top: 265px; left: 110px;",
-     "top: 215px; left: 95px;",
-     "top: 165px; left: 110px;",
-     "top: 130px; left: 145px;",
-     "top: 110px; left: 200px",
+     "top: 100px; left: 200px;",
+     "top: 113px; left: 150px;",
+     "top: 150px; left: 113px;",
+     "top: 200px; left: 100px;",
+     "top: 250px; left: 113px;",
+     "top: 287px; left: 150px;",
+     "top: 300px; left: 200px;",
+     "top: 287px; left: 250px;",
+     "top: 250px; left: 287px;",
+     "top: 200px; left: 300px;",
+     "top: 165px; left: 280px;",
+     "top: 113px; left: 250px",
 ];
 
-function addSeconde(){
+function addMinutes(){
+    if(compteur_secondes === 60){
+        compteur_minutes ++;
+        compteur_secondes = 0;
+    }
+}
+
+function addHour(){
+    if(compteur_minutes === 60){
+        compteur_heures ++;
+        compteur_secondes, compteur_minutes = 0;
+    }
+}
+
+function resetTime(){
+    if(compteur_heures === 12){
+        compteur_secondes,  compteur_minutes, compteur_heures = 0;
+    }
+}
+
+function horloge(){
+    compteur_secondes ++;
+    addMinutes();
+    addHour();
+    resetTime();
+
+    //console.log(minute);
+    //console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure');  
+        if(compteur_minutes === 5) {minute.setAttribute("style", position[0])};
+        if(compteur_minutes === 10) {minute.setAttribute("style", position[1])};
+        if(compteur_minutes === 15) {minute.setAttribute("style", position[2])};
+        if(compteur_minutes === 20) {minute.setAttribute("style", position[3])};
+        if(compteur_minutes === 25) {minute.setAttribute("style", position[4])};
+        if(compteur_minutes === 30) {minute.setAttribute("style", position[5])};
+        if(compteur_minutes === 35) {minute.setAttribute("style", position[6])};
+        if(compteur_minutes === 40) {minute.setAttribute("style", position[7])};
+        if(compteur_minutes === 45) {minute.setAttribute("style", position[8])};
+        if(compteur_minutes === 50) {minute.setAttribute("style", position[9])};
+        if(compteur_minutes === 55) {minute.setAttribute("style", position[10])};
+        if(compteur_minutes === 60) {minute.setAttribute("style", position[11])};
+
+    console.log(minute);
+}
+
+/*
+
 // MINUTES
-    compteur_secondes += 1; // pour le test, sinon mettre la valeur a ++.
     if(compteur_minutes === 5)  {minute.setAttribute('style', position[0]);}                                 
     if(compteur_minutes === 10) {minute.setAttribute('style', position[1]);}       
     if(compteur_minutes === 15) {minute.setAttribute('style', position[2]);}       
@@ -75,13 +117,10 @@ function addSeconde(){
         heure.setAttribute('style', 'top: 110px; left: 200px');
         minute.setAttribute('style', 'top: 110px; left: 200px');
     }
+*/
 
-    
-    console.log(compteur_secondes + ' seconde : ' + compteur_minutes + ' minute : ' + compteur_heures + ' heure');
-}
-
-onOff[0].addEventListener('click', ()=> {
-    start = window.setInterval(addSeconde, 1); // pour testé si l'horge fonctionne comme prévue sinon mettre la valeur a 1000, pour 1seconde.
+on_Off[1].addEventListener('click', ()=> {
+    start = window.setInterval(horloge, 1); // pour testé si l'horge fonctionne comme prévue sinon mettre la valeur a 1000, pour 1seconde.
 });
 
-onOff[1].addEventListener('click', ()=> window.clearInterval(start));
+on_Off[0].addEventListener('click', ()=> window.clearInterval(start));
