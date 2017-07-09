@@ -8,7 +8,7 @@ let heure = document.querySelector('#aiguilleheure');
 // stock toutes les positions de l'aiguille heure + minute
 const position = [    
      "top: 130px; left: 245px;",
-     "top: 180px; left: 275px;",    
+     "top: 160px; left: 275px;",    
      "top: 215px; left: 290px;",    
      "top: 265px; left: 285px;",    
      "top: 300px; left: 245px;",    
@@ -51,21 +51,23 @@ function horloge(){
     resetTime();
 
 //AUGUILLEMINUTE ( donne la position de l'aiguille en fonctione des minutes)
-        if(compteur_minutes === 5) {minute.setAttribute("style", position[0])};
-        if(compteur_minutes === 10) {minute.setAttribute("style", position[1])};
-        if(compteur_minutes === 15) {minute.setAttribute("style", position[2])};
-        if(compteur_minutes === 20) {minute.setAttribute("style", position[3])};
-        if(compteur_minutes === 25) {minute.setAttribute("style", position[4])};
-        if(compteur_minutes === 30) {minute.setAttribute("style", position[5])};
-        if(compteur_minutes === 35) {minute.setAttribute("style", position[6])};
-        if(compteur_minutes === 40) {minute.setAttribute("style", position[7])};
-        if(compteur_minutes === 45) {minute.setAttribute("style", position[8])};
-        if(compteur_minutes === 50) {minute.setAttribute("style", position[9])};
-        if(compteur_minutes === 55) {minute.setAttribute("style", position[10])};
-        if(compteur_minutes === 60) {minute.setAttribute("style", position[11])}; 
+        if(compteur_minutes === 5)  {minute.setAttribute("style", position[0]);}
+        if(compteur_minutes === 10) {minute.setAttribute("style", position[1]);}
+        if(compteur_minutes === 15) {minute.setAttribute("style", position[2]);}
+        if(compteur_minutes === 20) {minute.setAttribute("style", position[3]);}
+        if(compteur_minutes === 25) {minute.setAttribute("style", position[4]);}
+        if(compteur_minutes === 30) {minute.setAttribute("style", position[5]);}
+        if(compteur_minutes === 35) {minute.setAttribute("style", position[6]);}
+        if(compteur_minutes === 40) {minute.setAttribute("style", position[7]);}
+        if(compteur_minutes === 45) {minute.setAttribute("style", position[8]);}
+        if(compteur_minutes === 50) {minute.setAttribute("style", position[9]);}
+        if(compteur_minutes === 55) {minute.setAttribute("style", position[10]);}
+        if(compteur_minutes === 60) {minute.setAttribute("style", position[11]);}
 
 //AUGUILLEHEURE ( donne la position de l'aiguille en fonctione de l'heure )
-        if(compteur_heures === 1)  {heure.setAttribute('style', position[0]);}
+        if(compteur_heures === 1)  {
+            heure.setAttribute('style', position[0]);
+        }
         if(compteur_heures === 2)  {heure.setAttribute('style', position[1]);}
         if(compteur_heures === 3)  {heure.setAttribute('style', position[2]);}
         if(compteur_heures === 4)  {heure.setAttribute('style', position[3]);}
@@ -86,3 +88,28 @@ on_Off[1].addEventListener('click', ()=> {
 });
 // arrete l'horloge grâce au clearInterval
 on_Off[0].addEventListener('click', ()=> window.clearInterval(start)); 
+
+
+/*** 
+    CANVAS
+***/
+
+let canvas = document.querySelector('canvas');
+let ctx = canvas.getContext('2d');
+/**
+ * cercle principal
+ */
+ctx.beginPath();
+ctx.lineWidth = 6;
+ctx.strokeStyle = "red"
+ctx.arc(193, 214, 120, 0, Math.PI * 2);
+ctx.stroke();
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.lineWidth = 6;
+ctx.strokeStyle = "blue"
+ctx.arc(193, 216, 80, 0, Math.PI * 2);
+ctx.stroke();
+ctx.closePath();

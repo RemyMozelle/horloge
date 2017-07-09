@@ -9,7 +9,7 @@
 	#chiffre5 {position: absolute; top: 287px; left: 250px}
 	#chiffre4 {position: absolute; top: 250px; left: 287px}
 	#chiffre3 {position: absolute; top: 200px; left: 300px}
-	#chiffre2 {position: absolute; top: 165px; left: 280px}
+	#chiffre2 {position: absolute; top: 150px; left: 280px}
 	#chiffre1 {position: absolute; top: 113px; left: 250px}
 /* Position du rond central*/
 	#centre {position: absolute; top: 200px; left: 200px; font-family: arial}
@@ -17,3 +17,5 @@
 /* Positions initiales des aiguilles */
 	#aiguilleheure {position: absolute; top: 110px; left: 200px}
 	#aiguilleminute {position: absolute; top: 110px; left: 200px}
+
+	canvas{ border: 1px solid red;}
