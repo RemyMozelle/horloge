@@ -101,7 +101,7 @@ let ctx = canvas.getContext('2d');
  */
 ctx.beginPath();
 ctx.lineWidth = 6;
-ctx.strokeStyle = "red"
+
 ctx.arc(193, 214, 120, 0, Math.PI * 2);
 ctx.stroke();
 ctx.closePath();
@@ -109,7 +109,7 @@ ctx.closePath();
 
 ctx.beginPath();
 ctx.lineWidth = 6;
-ctx.strokeStyle = "blue"
+
 ctx.arc(193, 216, 80, 0, Math.PI * 2);
 ctx.stroke();
 ctx.closePath();
